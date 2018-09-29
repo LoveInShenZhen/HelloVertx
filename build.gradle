@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.2.41'
+    id 'org.jetbrains.kotlin.jvm' version '1.2.61'
     id 'application'
 }
 
@@ -13,13 +13,9 @@ repositories {
     }
     mavenLocal()
     maven {
-        name "nexus-163"
-        url "http://mirrors.163.com/maven/repository/maven-public/"
+        name "nexus-huaweicloud"
+        url "https://mirrors.huaweicloud.com/repository/maven/"
     }
-    // maven {
-    //     name "aliyun-maven"
-    //     url "http://maven.aliyun.com/nexus/content/groups/public/"
-    // }
     mavenCentral()
 }
 
@@ -72,8 +68,8 @@ task usage {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    compile "org.jetbrains.kotlin:kotlin-reflect"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.61"
+    compile "org.jetbrains.kotlin:kotlin-reflect:1.2.61"
 
     compile files("conf")
 
